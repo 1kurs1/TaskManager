@@ -20,10 +20,19 @@
 #include <wrl/client.h>
 #include <ShlObj.h>
 #include <comdef.h>
+
+#else
+#include <limits>
 #endif
 
 const char* APPLICATION_NAME = "Task Manager";
-const char* APP_VERSION = "v0.1.0";
+const char* APP_VERSION = "v0.1.1";
+
+#ifdef PLATFORM_WINDOWS
+const char* CLEAR_COMMAND = "cls";
+#else
+const char* CLEAR_COMMAND = "clear";
+#endif
 
 const std::string ALL_TASKS_FILE_NAME = "UserTasks.txt";
 

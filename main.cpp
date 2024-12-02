@@ -134,7 +134,7 @@ public:
 	int getTasksCount() { return m_allTasks.size(); }
 
 	void displayTasks() {
-		system("cls");
+		system(CLEAR_COMMAND);
 		std::cout << "Your current tasks:\n";
 		std::cout << "-----------------------------------------------\n\n";
 		for (int i = 1; i <= m_allTasks.size(); i++) {
